@@ -14,7 +14,6 @@ import java.util.UUID;
 @Getter
 @Setter
 @RequiredArgsConstructor
-@Table(name = "tb_post")
 public class Post implements Serializable {
 
     @Id
@@ -26,7 +25,7 @@ public class Post implements Serializable {
     @Column(nullable = false)
     private Boolean isPublished;
 
-    @OneToMany(mappedBy = "tb_post")
+    @OneToMany(mappedBy = "post")
     private List<Comment> comments;
 
 
